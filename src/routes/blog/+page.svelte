@@ -1,15 +1,8 @@
 <script>
-	export let data;
+	let { data } = $props();
 </script>
 
 <h1>Blog</h1>
-
-{#if data.lastVisited}
-	<p>
-		<strong>Dernier article visité :</strong>
-		<a href="/blog/{data.lastVisited}">{data.lastVisited}</a>
-	</p>
-{/if}
 
 <ul>
 	{#each data.summaries as { slug, title }}
