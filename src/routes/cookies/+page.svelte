@@ -4,7 +4,7 @@
 
 <form method="POST" action="?/setCookie">
 	<label for="username">Nom d'utilisateur :</label>
-	<input id="username" name="username" bind:value={username} />
+	<input name="username" bind:value={username} />
 	<button type="submit">Définir Cookie</button>
 </form>
 
