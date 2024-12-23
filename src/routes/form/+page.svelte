@@ -1,6 +1,6 @@
 <script lang="ts">
-	let name = '';
-	let email = '';
+	let name = $state('');
+	let email = $state('');
 
 	function handleSubmit(event: SubmitEvent) {
 		event.preventDefault();
@@ -8,15 +8,15 @@
 	}
 </script>
 
-<form onsubmit={handleSubmit}>
+<form method="POST" action="?/create">
 	<label>
 		Nom :
-		<input type="text" bind:value={name} placeholder="Votre nom" required />
+		<input type="text" name="name" bind:value={name} placeholder="Votre nom" required />
 	</label>
 
 	<label>
 		Email :
-		<input type="email" bind:value={email} placeholder="Votre email" required />
+		<input type="email" name="email" bind:value={email} placeholder="Votre email" required />
 	</label>
 
 	<button type="submit">Soumettre</button>
