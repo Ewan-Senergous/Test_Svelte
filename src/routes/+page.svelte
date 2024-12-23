@@ -2,6 +2,7 @@
 	import Counter from './Counter.svelte';
 	import welcome from '$lib/images/svelte-welcome.webp';
 	import welcomeFallback from '$lib/images/svelte-welcome.png';
+	import { message } from '$lib/message.js';
 </script>
 
 <svelte:head>
@@ -26,6 +27,7 @@
 	</h2>
 
 	<Counter />
+	<p>{message}</p>
 </section>
 
 <style>
