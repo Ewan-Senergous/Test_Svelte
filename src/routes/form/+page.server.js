@@ -1,5 +1,6 @@
 export const actions = {
-	default: async ({ request }) => {
+	create: async ({ request }) => {
+		await new Promise((fulfil) => setTimeout(fulfil, 1000));
 		const formData = await request.formData();
 		const name = formData.get('name');
 		const email = formData.get('email');
